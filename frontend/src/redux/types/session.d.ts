@@ -1,6 +1,6 @@
 
 export interface SessionInitialState {
-    user: null | User;
+    user: null | IUser;
 }
 
 export interface IUser {

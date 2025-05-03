@@ -1,5 +1,5 @@
 import { IActionCreator} from "./types/redux";
-import { ICredentials, ISignUpUser, IUser } from "./types/session";
+import { ICredentials, ISignUpUser, IUser, SessionInitialState } from "./types/session";
 
 
 const SET_USER = 'session/setUser';
@@ -88,9 +88,13 @@ export const thunkLogout = ():any => async (dispatch: any) => {
   }
 };
 
-const initialState = { user: null };
+const initialState:SessionInitialState = { user: null };
 
-function sessionReducer(state = initialState, action: IActionCreator) {
+function sessionReducer(state = initialState, action: IActionCreator): SessionInitialState {
+  let newState = {
+    ...state
+  };
+
   switch (action.type) {
     case SET_USER:
       return { ...state, user: action.payload };
