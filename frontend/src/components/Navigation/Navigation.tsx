@@ -6,7 +6,7 @@ function Navigation():JSX.Element {
   return (
     <ul>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/">Sweet Escape</NavLink>
       </li>
 
       <li>

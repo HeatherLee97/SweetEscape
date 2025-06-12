@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import { thunkSignup } from "../../redux/session";
 import { useAppSelector } from "../../redux/store";
+import './SignupForm.css'
 
 
 interface ISignUpErrors {

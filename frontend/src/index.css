@@ -1,1 +1,13 @@
 /* TODO: Add sitewide styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: 'segoe ui', arial, sans-serif;
+    background-image: url(https://img.freepik.com/free-vector/flat-design-polygonal-background_23-2148907552.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color:white;
+}

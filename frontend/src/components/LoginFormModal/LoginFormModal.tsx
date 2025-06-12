@@ -36,7 +36,8 @@ function LoginFormModal():JSX.Element {
 
   return (
     <>
-      <h1>Log In</h1>
+    <ul className={"login-modal"}>
+      <h1>Log In </h1>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label>
           Email
@@ -60,6 +61,7 @@ function LoginFormModal():JSX.Element {
         {errors.password && <p>{errors.password}</p>}
         <button type="submit">Log In</button>
       </form>
+      </ul>
     </>
   );
 }
