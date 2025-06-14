@@ -9,6 +9,7 @@ from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
 from .seeds import seed_commands
 from .config import Config
+from Werkzeug.security import gernerate_password_hash, check_password_hash
 
 app = Flask(__name__, static_folder="../../frontend/dist", static_url_path="/")
 
@@ -34,6 +35,11 @@ Migrate(app, db)
 # Application Security
 CORS(app)
 
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(200), nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    password_hash = db.Column(db.String(120))
 
 # Since we are deploying with Docker and Flask,
 # we won't be using a buildpack when we deploy to Heroku.
